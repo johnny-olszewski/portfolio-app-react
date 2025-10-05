@@ -4,7 +4,7 @@ import {
   TbBrandLinkedin,
   TbMail,
 } from "react-icons/tb";
-import johnnyImage from "../../../assets/johnny-fine-line.png";
+import johnnyImage from "../../../assets/johnny-fine-line.webp";
 
 const LandingComponent = () => {
   const _renderHeading = () => {
@@ -50,7 +50,7 @@ const LandingComponent = () => {
   };
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-row items-center justify-center bg-[radial-gradient(circle,rgba(249,250,251,1)_0%,rgba(249,250,251,1)_70%,rgba(209,213,219,1)_100%)]">
+    <div className="w-full h-full min-h-screen flex flex-row items-center justify-center">
       <div className="max-w-2xl flex flex-col items-start justify-center gap-4">
         {_renderHeading()}
         {_renderDetails()}

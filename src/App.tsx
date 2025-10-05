@@ -4,7 +4,7 @@ import ExperienceComponent from "./pages/main/experience-component";
 
 function App() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-gray-50">
       <div className="h-screen w-full">
         <LandingComponent />
       </div>
