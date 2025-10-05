@@ -1,7 +1,16 @@
+import LandingComponent from "./pages/main/landing-component";
+import "./App.css";
+import ExperienceComponent from "./pages/main/experience-component";
+
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800">johnnyo.dev</h1>
+    <div className="flex flex-col">
+      <div className="h-screen w-full">
+        <LandingComponent />
+      </div>
+      <div className="w-full">
+        <ExperienceComponent />
+      </div>
     </div>
   );
 }
