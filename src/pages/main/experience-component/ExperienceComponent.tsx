@@ -35,8 +35,13 @@ const ExperienceComponent = () => {
       <div className="flex">
         <img src={hornetImage} alt="F/A-18 Hornet" className="pr-12 w-[50vh]" />
       </div>
-      <div className="flex flex-col gap-8">
-        {experiences.map((exp, index) => _renderExperience(exp, index))}
+      <div className="flex flex-col">
+        <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 w-fit">
+          my journey
+        </h2>
+        <div className="flex flex-col gap-8 pt-8">
+          {experiences.map((exp, index) => _renderExperience(exp, index))}
+        </div>
       </div>
     </div>
   );

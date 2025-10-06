@@ -50,13 +50,13 @@ const LandingComponent = () => {
   };
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-row items-center justify-center">
+    <div className="w-full h-full min-h-[90vh] flex flex-row items-center justify-center">
       <div className="max-w-2xl flex flex-col items-start justify-center gap-4">
         {_renderHeading()}
         {_renderDetails()}
       </div>
       <div className="flex">
-        <img src={johnnyImage} alt="Johnny Olszewski" className="w-[35vh]" />
+        <img src={johnnyImage} alt="Johnny Olszewski" className="w-[50vh]" />
       </div>
     </div>
   );
