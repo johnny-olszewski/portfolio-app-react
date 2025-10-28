@@ -4,20 +4,22 @@ import {
   TbBrandLinkedin,
   TbMail,
 } from "react-icons/tb";
-import johnnyImage from "../../../assets/johnny-fine-line.webp";
+import johnnyImage from "../../../assets/johnny-fine-line.png";
 
 const LandingComponent = () => {
   const _renderHeading = () => {
     return (
       <div className="flex flex-col items-start justify-center gap-4">
         <p className="text-2xl">Hi there, I'm</p>
-        <h1 className="text-7xl font-bold" font-roboto>
+        <h1
+          className="text-7xl font-bold text-lime-800 bg-black/20 p-8 rounded-lg"
+          font-roboto
+        >
           Johnny Olszewski
         </h1>
         <div className="flex flex-row text-2xl gap-2">
-          <h2 className="">iOS Engineer</h2>
-          <h2 className="">Full Stack Developer</h2>
-          <h2 className="">Marine Corps Veteran</h2>
+          <h2 className="">Software Engineer.</h2>
+          <h2 className="">Builder.</h2>
         </div>
       </div>
     );
@@ -26,9 +28,9 @@ const LandingComponent = () => {
   const _renderDetails = () => {
     return (
       <div className="flex flex-col items-start justify-center gap-6">
-        <p className="text-2xl text-gray-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <p className="text-2xl text-gray-500">
+          Whether it's building software professionally or tinkering on my own,
+          I love to see my vision come to life and build someting from nothing.
         </p>
         <div className="flex flex-row items-center gap-1">
           <TbMapPin className="text-gray-400" />

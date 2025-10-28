@@ -3,4 +3,5 @@ export type Experience = {
   organization: string;
   period: string;
   description: string;
+  image?: string;
 };
