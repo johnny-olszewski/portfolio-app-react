@@ -1,16 +1,18 @@
+"use client";
+
 import {
   TbMapPin,
   TbBrandGithub,
   TbBrandLinkedin,
   TbMail,
 } from "react-icons/tb";
-import johnnyImage from "../../../assets/johnny-fine-line.png";
+import Image from "next/image";
 
 const LandingComponent = () => {
   const _renderHeading = () => {
     return (
       <div className="flex flex-col items-start justify-center gap-4">
-        <p className="text-2xl">Hi there, I'm</p>
+        <p className="text-2xl">Hi there, I&apos;m</p>
         <h1
           className="text-7xl font-bold text-lime-800 bg-black/20 p-8 rounded-lg"
           font-roboto
@@ -29,8 +31,9 @@ const LandingComponent = () => {
     return (
       <div className="flex flex-col items-start justify-center gap-6">
         <p className="text-2xl text-gray-500">
-          Whether it's building software professionally or tinkering on my own,
-          I love to see my vision come to life and build someting from nothing.
+          Whether it&apos;s building software professionally or tinkering on my
+          own, I love to see my vision come to life and build someting from
+          nothing.
         </p>
         <div className="flex flex-row items-center gap-1">
           <TbMapPin className="text-gray-400" />
@@ -58,7 +61,14 @@ const LandingComponent = () => {
         {_renderDetails()}
       </div>
       <div className="flex">
-        <img src={johnnyImage} alt="Johnny Olszewski" className="w-[50vh]" />
+        <Image
+          src="/images/johnny-fine-line.png"
+          alt="Johnny Olszewski"
+          width={500}
+          height={500}
+          className="w-[50vh]"
+          priority
+        />
       </div>
     </div>
   );

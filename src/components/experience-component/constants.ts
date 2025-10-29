@@ -1,8 +1,3 @@
-import resmedLogo from "../../../assets/resmed-logo.png";
-import virginiaTechLogo from "../../../assets/vt-logo.png";
-import hornetFineLine from "../../../assets/hornet-fine-line.png";
-import richmondLogo from "../../../assets/richmond-logo.png";
-
 export const Constants = {
   EXPERIENCE_DATA: [
     {
@@ -11,7 +6,7 @@ export const Constants = {
       period: "Mar 2024 - Present",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: resmedLogo,
+      image: "/images/resmed-logo.png",
     },
     {
       title: "Founding Software Engineer",
@@ -19,7 +14,7 @@ export const Constants = {
       period: "Mar 2024 - Present",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: hornetFineLine,
+      image: "/images/hornet-fine-line.png",
     },
     {
       title: "M.S. Information Technology",
@@ -27,7 +22,7 @@ export const Constants = {
       period: "Mar 2024 - Present",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: virginiaTechLogo,
+      image: "/images/vt-logo.png",
     },
     {
       title: "Captain, F/A-18 Weapon Systems Officer",
@@ -35,7 +30,7 @@ export const Constants = {
       period: "2017-2024",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: hornetFineLine,
+      image: "/images/hornet-fine-line.png",
     },
     {
       title: "B.A. Computer Science",
@@ -43,7 +38,7 @@ export const Constants = {
       period: "2012 - 2016",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: richmondLogo,
+      image: "/images/richmond-logo.png",
     },
   ],
 };

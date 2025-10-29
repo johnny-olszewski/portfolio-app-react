@@ -1,6 +1,7 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import flash from "../../../assets/flash.webp";
 
 const AboutMeComponent = () => {
   const ref = useRef(null);
@@ -18,7 +19,7 @@ const AboutMeComponent = () => {
         transition={{ duration: 1 }}
         className="absolute inset-0"
         style={{
-          backgroundImage: `url(${flash})`,
+          backgroundImage: `url(/images/flash.webp)`,
           backgroundSize: "cover",
           backgroundPosition: "center 80%",
           backgroundRepeat: "no-repeat",

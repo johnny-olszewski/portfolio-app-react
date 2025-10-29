@@ -1,73 +1,140 @@
-# React + TypeScript + Vite
+# Portfolio App - Next.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern portfolio website built with Next.js 15, React 19, TypeScript, and Tailwind CSS. Features smooth animations with Framer Motion and a responsive design.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: Next.js 15 (App Router)
+- **React**: 19.1.1
+- **TypeScript**: 5.9.3
+- **Styling**: Tailwind CSS 3.4.18
+- **Animations**: Framer Motion 12.23.22
+- **Icons**: React Icons 5.5.0
 
-## React Compiler
+## 📁 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+portfolio-app-react/
+├── public/
+│   └── images/          # Static assets (images, logos)
+├── src/
+│   ├── app/
+│   │   ├── globals.css  # Global styles
+│   │   ├── layout.tsx   # Root layout with metadata
+│   │   └── page.tsx     # Home page
+│   └── components/
+│       ├── header-component/
+│       ├── landing-component/
+│       ├── background-component/
+│       ├── about-me-component/
+│       ├── experience-component/
+│       ├── projects-component/
+│       └── contact-component/
+├── next.config.js       # Next.js configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+└── tsconfig.json        # TypeScript configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Install dependencies:
+
+```bash
+npm install
 ```
+
+2. Run the development server:
+
+```bash
+npm run dev
+```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🎨 Features
+
+- **Server Components**: Optimized performance with React Server Components
+- **Client Components**: Interactive features with Framer Motion animations
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Image Optimization**: Next.js Image component for optimized images
+- **TypeScript**: Full type safety throughout the application
+- **Modern UI**: Clean and professional design with smooth animations
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory for any environment-specific variables.
+
+### Tailwind CSS
+
+The Tailwind configuration is customized with:
+
+- Roboto font family
+- Custom color schemes
+- Responsive breakpoints
+
+### Next.js
+
+The Next.js configuration includes:
+
+- Image optimization settings
+- React strict mode enabled
+- Path aliases (`@/` for src directory)
+
+## 📝 Customization
+
+### Adding New Components
+
+1. Create a new directory in `src/components/`
+2. Add your component file and index.ts
+3. Import and use in `src/app/page.tsx` or other pages
+
+### Updating Content
+
+- **Experience**: Edit `src/components/experience-component/constants.ts`
+- **Projects**: Edit `src/components/projects-component/constants.ts`
+- **Images**: Add to `public/images/` directory
+
+## 🚀 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Import your repository to [Vercel](https://vercel.com)
+3. Vercel will automatically detect Next.js and configure the build
+
+### Other Platforms
+
+Build the application:
+
+```bash
+npm run build
+```
+
+Then deploy the `.next` folder and `public` directory to your hosting provider.
+
+## 📄 License
+
+See LICENSE file for details.
+
+## 👤 Author
+
+Johnny Olszewski - Software Engineer & Builder
+
+- Location: San Diego, CA
+- Website: johnnyo.dev

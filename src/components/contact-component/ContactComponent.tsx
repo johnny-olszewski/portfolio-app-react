@@ -1,6 +1,7 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import filipinoTattoo from "../../../assets/filipino-tattoo.webp";
 
 const ContactComponent = () => {
   const ref = useRef(null);
@@ -18,7 +19,7 @@ const ContactComponent = () => {
         transition={{ duration: 1 }}
         className="absolute inset-0"
         style={{
-          backgroundImage: `url(${filipinoTattoo})`,
+          backgroundImage: `url(/images/filipino-tattoo.webp)`,
           backgroundSize: "cover",
           backgroundPosition: "center 80%",
           backgroundRepeat: "no-repeat",

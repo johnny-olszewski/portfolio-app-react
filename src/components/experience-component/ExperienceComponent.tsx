@@ -1,8 +1,10 @@
+"use client";
+
 import { Constants } from "./constants";
 import type { Experience } from "./types";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import hornetImage from "../../../assets/hornet-fine-line.png";
+import Image from "next/image";
 
 const ExperienceItem = ({
   experience,
@@ -38,7 +40,13 @@ const ExperienceItem = ({
       {/* Background image at the trailing end */}
       {experience.image && (
         <div className="absolute right-0 opacity-50 translate-x-1/2 pointer-events-none">
-          <img src={experience.image} alt="" className="w-48 object-contain" />
+          <Image
+            src={experience.image}
+            alt=""
+            width={192}
+            height={192}
+            className="w-48 object-contain"
+          />
         </div>
       )}
 
@@ -60,7 +68,13 @@ const ExperienceComponent = () => {
   return (
     <div className="w-full h-full min-h-screen flex flex-row items-center justify-center">
       <div className="flex">
-        <img src={hornetImage} alt="F/A-18 Hornet" className="pr-12 w-[50vh]" />
+        <Image
+          src="/images/hornet-fine-line.png"
+          alt="F/A-18 Hornet"
+          width={500}
+          height={500}
+          className="pr-12 w-[50vh]"
+        />
       </div>
       <div className="flex flex-col">
         <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 w-fit">
