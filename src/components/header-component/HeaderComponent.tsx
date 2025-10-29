@@ -1,36 +1,59 @@
+"use client";
+
 import type { ReactNode } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface HeaderComponentProps {
   children: ReactNode;
 }
 
 const HeaderComponent = ({ children }: HeaderComponentProps) => {
+  const pathname = usePathname();
+
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 w-full flex flex-row items-center justify-between px-8 py-6 z-20">
-        <div className="text-xl font-bold">johnnyo.dev</div>
+      <header className="fixed top-0 left-0 right-0 w-full flex flex-row items-center justify-between px-8 py-6 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <Link
+          href="/"
+          className="text-xl font-bold hover:text-lime-600 transition-colors"
+        >
+          johnnyo.dev
+        </Link>
         <nav className="flex flex-row items-center gap-6 text-lg">
-          <a
-            href=""
-            className="text-blue-500 hover:text-gray-900 transition-colors bg-slate-500/40 p-2 rounded-lg"
+          <Link
+            href="/"
+            className={`hover:text-gray-900 transition-colors p-2 rounded-lg ${
+              pathname === "/"
+                ? "text-blue-500 bg-slate-500/40"
+                : "text-gray-600"
+            }`}
           >
             Portfolio
-          </a>
-          <a
-            href=""
-            className="text-gray-600 hover:text-gray-900 transition-colors"
+          </Link>
+          <Link
+            href="/freelance"
+            className={`hover:text-gray-900 transition-colors p-2 rounded-lg ${
+              pathname === "/freelance"
+                ? "text-blue-500 bg-slate-500/40"
+                : "text-gray-600"
+            }`}
           >
             Freelance
-          </a>
-          <a
-            href=""
-            className="text-gray-600 hover:text-gray-900 transition-colors"
+          </Link>
+          <Link
+            href="/blog"
+            className={`hover:text-gray-900 transition-colors p-2 rounded-lg ${
+              pathname === "/blog"
+                ? "text-blue-500 bg-slate-500/40"
+                : "text-gray-600"
+            }`}
           >
             Blog
-          </a>
+          </Link>
         </nav>
-      </div>
-      {children}
+      </header>
+      <main className="pt-24">{children}</main>
     </>
   );
 };

@@ -55,18 +55,18 @@ const LandingComponent = () => {
   };
 
   return (
-    <div className="w-full h-full min-h-[90vh] flex flex-row items-center justify-center">
+    <div className="w-full h-full min-h-[90vh] flex flex-row items-center justify-center px-8 gap-12">
       <div className="max-w-2xl flex flex-col items-start justify-center gap-4">
         {_renderHeading()}
         {_renderDetails()}
       </div>
-      <div className="flex">
+      <div className="flex flex-shrink-0">
         <Image
           src="/images/johnny-fine-line.png"
           alt="Johnny Olszewski"
           width={500}
           height={500}
-          className="w-[50vh]"
+          className="w-[50vh] h-auto"
           priority
         />
       </div>
