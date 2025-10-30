@@ -1,3 +1,4 @@
+import { getAllPosts } from "@/lib/wpClient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,13 +6,18 @@ export const metadata: Metadata = {
   description: "Thoughts on software engineering, building, and technology.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllPosts();
+
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">Blog</h1>
-        <p className="text-xl text-gray-500">Coming soon...</p>
-      </div>
-    </div>
+    <main className="max-w-2xl mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-6">Blog</h1>
+      {posts.map((post: any) => (
+        <article key={post.id} className="mb-8">
+          <h2 className="text-xl font-semibold">{post.title}</h2>
+          <p dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+        </article>
+      ))}
+    </main>
   );
 }
