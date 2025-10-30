@@ -19,11 +19,11 @@ const BackgroundComponent = ({ children }: BackgroundComponentProps) => {
           className="absolute top-0 right-0 w-[40vh] opacity-50"
         />
         <Image
-          src="/images/monstera-left-edge.png"
-          alt="Monstera"
-          width={400}
-          height={800}
-          className="absolute bottom-0 left-0 h-[80vh] opacity-40"
+          src="/images/corner-leaves.png"
+          alt="Corner Leaves"
+          width={1024}
+          height={1024}
+          className="absolute bottom-0 left-0 h-[80vh] w-auto opacity-20"
         />
       </div>
       <div className="relative z-10">{children}</div>
