@@ -6,10 +6,6 @@ export const HEADER_LINKS: HeaderLink[] = [
     label: "Portfolio",
   },
   {
-    href: "/freelance",
-    label: "Freelance",
-  },
-  {
     href: "/blog",
     label: "Blog",
   },
