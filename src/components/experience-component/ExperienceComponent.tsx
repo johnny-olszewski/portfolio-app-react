@@ -1,9 +1,5 @@
-"use client";
-
 import { Constants } from "./constants";
 import type { Experience } from "./types";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import Image from "next/image";
 
 const ExperienceItem = ({
@@ -13,26 +9,9 @@ const ExperienceItem = ({
   experience: Experience;
   index: number;
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // Scale from 0.8 to 1.05 and back to 0.8 as it moves through viewport
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.85, 1.1, 0.85]);
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.7, 1],
-    [0.3, 1, 1, 0.3]
-  );
-
   return (
-    <motion.div
+    <div
       key={index}
-      ref={ref}
-      style={{ scale, opacity }}
       className="relative pl-8 pb-8 border-l-2 border-gray-300 last:pb-0 group"
     >
       <div className="absolute left-0 top-0 w-4 h-4 -ml-[9px] rounded-full bg-gray-400 border-4 border-gray-50 transition-all duration-300 group-hover:scale-150 group-hover:shadow-lg group-hover:shadow-gray-400/50" />
@@ -50,15 +29,25 @@ const ExperienceItem = ({
         </div>
       )}
 
-      <div className="flex flex-col gap-1 relative z-10">
-        <h3 className="text-xl font-semibold">{experience.title}</h3>
-        <div className="text-lg text-blue-500 font-medium">
+      <div className="flex flex-col gap-1 relative z-10 max-w-2xl">
+        <h3 className="text-xl font-semibold break-words">
+          {experience.title}
+        </h3>
+        <div className="text-lg text-blue-500 font-medium break-words">
           {experience.organization}
         </div>
-        <div className="text-sm text-gray-500">{experience.period}</div>
-        <p className="text-gray-500 pt-2">{experience.description}</p>
+        <div className="text-sm text-gray-500 break-words">
+          {experience.period}
+        </div>
+        <ul className="text-gray-500 pt-2 list-disc list-inside space-y-1 break-words">
+          {experience.bullets.map((bullet, bulletIndex) => (
+            <li key={bulletIndex} className="break-words">
+              {bullet}
+            </li>
+          ))}
+        </ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -66,7 +55,7 @@ const ExperienceComponent = () => {
   const experiences = Constants.EXPERIENCE_DATA;
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-row items-center justify-center">
+    <div className="w-full h-full min-h-screen flex flex-row items-center justify-center pt-48">
       <div className="flex">
         <Image
           src="/images/hornet-fine-line.png"
@@ -80,7 +69,7 @@ const ExperienceComponent = () => {
         <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 w-fit">
           my journey
         </h2>
-        <div className="flex flex-col gap-32 pt-8">
+        <div className="flex flex-col gap-8 pt-8">
           {experiences.map((exp, index) => (
             <ExperienceItem key={index} experience={exp} index={index} />
           ))}
