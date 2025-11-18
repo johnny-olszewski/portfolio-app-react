@@ -74,8 +74,13 @@ const ExperienceComponent = () => {
   const education = Constants.EDUCATION_DATA;
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-row items-center justify-center pt-48">
-      <div className="flex">
+    <div className="relative w-full h-full min-h-screen flex flex-row items-center justify-center pt-48">
+      {/* Green circle background */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="bg-[#dce2d5]/40 rounded-full aspect-square w-[40vh] -translate-x-24 -translate-y-48"></div>
+      </div>
+
+      <div className="relative z-10 flex">
         <Image
           src="/images/hornet-fine-line.png"
           alt="F/A-18 Hornet"
@@ -84,7 +89,7 @@ const ExperienceComponent = () => {
           className="pr-12 w-[50vh]"
         />
       </div>
-      <div className="flex flex-col">
+      <div className="relative z-10 flex flex-col">
         <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 w-fit">
           experience
         </h2>

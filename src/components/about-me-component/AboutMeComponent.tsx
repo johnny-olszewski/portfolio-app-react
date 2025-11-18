@@ -19,7 +19,7 @@ const AboutMeComponent = () => {
         transition={{ duration: 1 }}
         className="absolute inset-0"
         style={{
-          backgroundImage: `url(/images/flash.webp)`,
+          backgroundImage: `url(/images/flash_banner.png)`,
           backgroundSize: "cover",
           backgroundPosition: "center 80%",
           backgroundRepeat: "no-repeat",
