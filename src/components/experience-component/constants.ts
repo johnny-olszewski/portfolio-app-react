@@ -25,7 +25,7 @@ export const Constants = {
       description:
         "Mastered and employed F/A-18D Hornet weapons systems. Managed flight operations and aircrew qualifications, while overseeing safety programs for a squadron of over 500 personnel.",
       bullets: [],
-      image: "/images/hornet-fine-line.png",
+      image: "/images/usmc-logo.png",
     },
   ],
   EDUCATION_DATA: [
