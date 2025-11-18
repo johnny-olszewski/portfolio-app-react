@@ -18,13 +18,13 @@ const ExperienceItem = ({
 
       {/* Background image at the trailing end */}
       {experience.image && (
-        <div className="absolute right-0 opacity-50 translate-x-1/2 pointer-events-none">
+        <div className="absolute right-0 top-0 bottom-0 opacity-50 translate-x-1/2 pointer-events-none flex items-center">
           <Image
             src={experience.image}
             alt=""
             width={192}
             height={192}
-            className="w-48 object-contain"
+            className="w-48 h-full max-h-full object-contain"
           />
         </div>
       )}
@@ -39,20 +39,42 @@ const ExperienceItem = ({
         <div className="text-sm text-gray-500 break-words">
           {experience.period}
         </div>
-        <ul className="text-gray-500 pt-2 list-disc list-inside space-y-1 break-words">
-          {experience.bullets.map((bullet, bulletIndex) => (
-            <li key={bulletIndex} className="break-words">
-              {bullet}
-            </li>
-          ))}
-        </ul>
+        {experience.description && (
+          <p className="text-gray-500 pt-2 break-words">
+            {experience.description}
+          </p>
+        )}
+        {experience.bullets.length > 0 && (
+          <ul className="text-gray-500 pt-2 list-disc list-inside space-y-1 break-words">
+            {experience.bullets.map((bullet, bulletIndex) => (
+              <li key={bulletIndex} className="break-words">
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
+    </div>
+  );
+};
+
+interface ExperienceListProps {
+  experiences: Experience[];
+}
+
+const ExperienceList = ({ experiences }: ExperienceListProps) => {
+  return (
+    <div className="flex flex-col gap-8 pt-8">
+      {experiences.map((exp, index) => (
+        <ExperienceItem key={index} experience={exp} index={index} />
+      ))}
     </div>
   );
 };
 
 const ExperienceComponent = () => {
   const experiences = Constants.EXPERIENCE_DATA;
+  const education = Constants.EDUCATION_DATA;
 
   return (
     <div className="w-full h-full min-h-screen flex flex-row items-center justify-center pt-48">
@@ -67,13 +89,13 @@ const ExperienceComponent = () => {
       </div>
       <div className="flex flex-col">
         <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 w-fit">
-          my journey
+          experience
         </h2>
-        <div className="flex flex-col gap-8 pt-8">
-          {experiences.map((exp, index) => (
-            <ExperienceItem key={index} experience={exp} index={index} />
-          ))}
-        </div>
+        <ExperienceList experiences={experiences} />
+        <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 w-fit mt-16">
+          education
+        </h2>
+        <ExperienceList experiences={education} />
       </div>
     </div>
   );
