@@ -1,13 +1,13 @@
 export const Constants = {
   EXPERIENCE_DATA: [
     {
-      title: "Associate iOS Engineer",
-      organization: "ResMed",
-      period: "March 2024 - Present",
+      title: "Captain, F/A-18 Hornet Weapon Systems Officer",
+      organization: "United States Marine Corps",
+      period: "June 2017 - February 2024",
       description:
-        "Develop and maintain features for over 3.5 million active users in the myAir app, leading the migration from UIKit to SwiftUI.",
+        "Mastered and employed F/A-18D Hornet weapons systems. Managed flight operations and aircrew qualifications, while overseeing safety programs for a squadron of over 500 personnel.",
       bullets: [],
-      image: "/images/resmed-logo.png",
+      image: "/images/usmc-logo.png",
     },
     {
       title: "Founding Software Engineer",
@@ -19,13 +19,14 @@ export const Constants = {
       image: "/images/hornet-fine-line.png",
     },
     {
-      title: "Captain, F/A-18 Hornet Weapon Systems Officer",
-      organization: "United States Marine Corps",
-      period: "June 2017 - February 2024",
+      title: "Associate iOS Engineer",
+      organization: "Resmed",
+      period: "March 2024 - Present",
       description:
-        "Mastered and employed F/A-18D Hornet weapons systems. Managed flight operations and aircrew qualifications, while overseeing safety programs for a squadron of over 500 personnel.",
+        "Develop and maintain features for over 3.5 million active users in the myAir app, leading the migration from UIKit to SwiftUI.",
       bullets: [],
-      image: "/images/usmc-logo.png",
+      image: "/images/resmed-logo.png",
+      shadowTitle: "Current position",
     },
   ],
   EDUCATION_DATA: [

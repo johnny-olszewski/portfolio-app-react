@@ -5,35 +5,38 @@ import Image from "next/image";
 const ExperienceItem = ({
   experience,
   index,
+  showTimeline = true,
 }: {
   experience: Experience;
   index: number;
+  showTimeline?: boolean;
 }) => {
   return (
     <div
       key={index}
-      className="relative pl-8 pb-8 border-l-2 border-gray-300 last:pb-0 group"
+      className={`relative pb-8 ${
+        showTimeline ? "border-l-2 border-gray-300 pl-8" : ""
+      } last:pb-0 group`}
     >
-      <div className="absolute left-0 top-0 w-4 h-4 -ml-[9px] rounded-full bg-gray-400 border-4 border-gray-50 transition-all duration-300 group-hover:scale-150 group-hover:shadow-lg group-hover:shadow-gray-400/50" />
+      {showTimeline && (
+        <div className="absolute left-0 top-0 w-4 h-4 -ml-[9px] rounded-full bg-gray-400 border-4 border-gray-50 transition-all duration-300 group-hover:scale-150 group-hover:shadow-lg group-hover:shadow-gray-400/50" />
+      )}
 
-      {/* Background image at the trailing end */}
-      {/* {experience.image && (
-        <div className="absolute right-0 top-0 opacity-20 translate-x-full pointer-events-none">
-          <Image
-            src={experience.image}
-            alt=""
-            width={192}
-            height={192}
-            className="w-32 max-h-full object-contain"
-          />
+      {experience.shadowTitle && (
+        <div className="absolute bottom-full right-0 mb-0 text-xl text-gray-500/50 font-semibold break-words pointer-events-none">
+          <h2>{experience.shadowTitle}</h2>
         </div>
-      )} */}
+      )}
 
-      <div className="flex flex-col gap-1 relative z-10 max-w-2xl">
+      <div
+        className={`flex flex-col gap-1 relative z-10 max-w-2xl ${
+          experience.shadowTitle ? "bg-lime-600/10 p-4 rounded-lg" : ""
+        }`}
+      >
         <h3 className="text-xl font-semibold break-words">
           {experience.title}
         </h3>
-        <div className="text-lg text-lime-600 font-medium break-words">
+        <div className="text-lg text-lime-800 font-medium break-words">
           {experience.organization}
         </div>
         {experience.description && (
@@ -57,13 +60,28 @@ const ExperienceItem = ({
 
 interface ExperienceListProps {
   experiences: Experience[];
+  showTimeline?: boolean;
+  horizontal?: boolean;
 }
 
-const ExperienceList = ({ experiences }: ExperienceListProps) => {
+const ExperienceList = ({
+  experiences,
+  showTimeline = true,
+  horizontal = false,
+}: ExperienceListProps) => {
   return (
-    <div className="flex flex-col gap-8 pt-8">
+    <div
+      className={`flex pt-8 ${
+        horizontal ? "flex-row gap-16" : "flex-col gap-4"
+      }`}
+    >
       {experiences.map((exp, index) => (
-        <ExperienceItem key={index} experience={exp} index={index} />
+        <ExperienceItem
+          key={index}
+          experience={exp}
+          index={index}
+          showTimeline={showTimeline}
+        />
       ))}
     </div>
   );
@@ -97,7 +115,11 @@ const ExperienceComponent = () => {
         <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 w-fit mt-16">
           education
         </h2>
-        <ExperienceList experiences={education} />
+        <ExperienceList
+          experiences={education}
+          showTimeline={false}
+          horizontal={true}
+        />
       </div>
     </div>
   );

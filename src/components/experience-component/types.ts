@@ -5,4 +5,5 @@ export type Experience = {
   description?: string;
   bullets: string[];
   image?: string;
+  shadowTitle?: string;
 };
