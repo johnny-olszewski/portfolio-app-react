@@ -35,10 +35,10 @@ const AboutMeComponent = () => {
         <div className="text-white text-center px-8 bg-black/40 p-8 rounded-lg">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-lg max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            I live in San Diego, where I stayed after my time in the Marine
+            Corps, with my wife and our dog, Mosi. When I'm not working on a
+            project you can find me outside trying to soak up the southern
+            California sun or exploring somewhere new.
           </p>
         </div>
       </motion.div>

@@ -5,9 +5,9 @@ import axios from "axios";
 
 const ContactComponent = () => {
   const [formData, setFormData] = useState({
-    name: "johnny",
-    email: "test@test.com",
-    message: "test message",
+    name: "",
+    email: "",
+    message: "",
   });
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");

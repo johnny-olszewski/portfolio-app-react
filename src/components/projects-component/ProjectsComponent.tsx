@@ -54,7 +54,8 @@ const ProjectsComponent = () => {
               coming soon
             </h3>
             <p className="text-xl font-semibold">
-              Doing some final refactoring...
+              Doing some final refactoring... feel free to check out my GitHub
+              for a sneak peek.
             </p>
           </div>
         )}

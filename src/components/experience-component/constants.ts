@@ -5,7 +5,7 @@ export const Constants = {
       organization: "United States Marine Corps",
       period: "June 2017 - February 2024",
       description:
-        "My first career was in the Marine Corps as an F/A-18 WSO (e.g. Goose from Top Gun). The lessons I learned in teamwork and leadership during this time have served me will in and out of he Marine Corps.",
+        "My first career was as an F/A-18 WSO (think Goose from Top Gun) in the Marine Corps. The lessons I learned in teamwork and leadership during this time have served me well in and out of the Marine Corps.",
       bullets: [],
       image: "/images/usmc-logo.png",
     },
@@ -14,7 +14,7 @@ export const Constants = {
       organization: "Prize Inc.",
       period: "November 2023 - Present",
       description:
-        "All good things must come to an end, and during my transitions out of the Marine Corps, outside of work, I was able to lean into an opportunity to help on a team building a service for veterans. It was great exposure and helped me expand my skills.",
+        "All good things must come to an end - during my transition out of the Marine Corps, I was able to lean into an opportunity to help on a team building a service for veterans. It was great exposure and helped me expand my skills.",
       bullets: [],
       image: "/images/hornet-fine-line.png",
     },
@@ -23,7 +23,7 @@ export const Constants = {
       organization: "Resmed",
       period: "March 2024 - Present",
       description:
-        "After the Marine Corps I've landed at Resmed, industry leader in CPAP devices for sleep apenea. I've primarily worked on the iOS variant of myAir, a mobile app for Resmed devices. The learning and growth I've experienced in this role have been invaluable.",
+        "After the Marine Corps I've landed at Resmed, the industry leader in CPAP devices to treat sleep apnea. I've worked primarily on the iOS variant of myAir, our mobile app for Resmed devices. The learning and growth I've experienced in this role have been invaluable.",
       bullets: [],
       image: "/images/resmed-logo.png",
       shadowTitle: "Current position",

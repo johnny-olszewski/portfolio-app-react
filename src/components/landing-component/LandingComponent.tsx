@@ -28,20 +28,36 @@ const LandingComponent = () => {
       <div className="flex flex-col items-start justify-center gap-6 w-full">
         <p className="text-2xl text-gray-500">{Constants.DESCRIPTION}</p>
         <div className="flex flex-row items-center gap-2 w-full justify-between">
-          <div className="flex flex-row items-center gap-2">
-            <TbMapPin className="text-gray-400 w-[24px] h-[24px]" />
+          <div className="flex flex-row items-center gap-2 bg-lime-100 rounded-full py-2 px-4 text-lime-800">
+            <TbMapPin className="w-[24px] h-[24px]" />
             <p>{Constants.LOCATION}</p>
           </div>
           <div className="flex flex-row gap-4">
-            <div className="p-2 rounded-full border border-gray-400 hover:border-gray-600 transition-colors cursor-pointer">
+            <a
+              href="https://github.com/johnny-olszewski"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Johnny Olszewski's GitHub profile"
+              className="p-2 rounded-full border border-gray-400 hover:border-gray-600 transition-colors cursor-pointer"
+            >
               <TbBrandGithub className="text-gray-600 text-xl " />
-            </div>
-            <div className="p-2 rounded-full border border-gray-400 hover:border-gray-600 transition-colors cursor-pointer">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/johnny-olszewski-m/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Johnny Olszewski's LinkedIn profile"
+              className="p-2 rounded-full border border-gray-400 hover:border-gray-600 transition-colors cursor-pointer"
+            >
               <TbBrandLinkedin className="text-gray-600 text-xl" />
-            </div>
-            <div className="p-2 rounded-full border border-gray-400 hover:border-gray-600 transition-colors cursor-pointer">
+            </a>
+            <a
+              href="mailto:johnny@johnnyo.dev"
+              aria-label="Send email to Johnny Olszewski"
+              className="p-2 rounded-full border border-gray-400 hover:border-gray-600 transition-colors cursor-pointer"
+            >
               <TbMail className="text-gray-600 text-xl" />
-            </div>
+            </a>
           </div>
         </div>
       </div>
