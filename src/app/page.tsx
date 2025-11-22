@@ -8,7 +8,7 @@ import BackgroundComponent from "@/components/background-component/BackgroundCom
 export default function Home() {
   return (
     <>
-      <BackgroundComponent>
+      <BackgroundComponent backgroundColor="bg-white">
         <div className="w-full">
           <LandingComponent />
         </div>
@@ -16,12 +16,42 @@ export default function Home() {
       <div className="w-full">
         <AboutMeComponent />
       </div>
-      <div className="w-full">
-        <ExperienceComponent />
-      </div>
-      <div className="w-full">
-        <ProjectsComponent />
-      </div>
+      <BackgroundComponent
+        backgroundColor="bg-white"
+        images={[
+          {
+            src: "/images/corner-leaves-top-right.png",
+            alt: "Corner Leaves Top Right",
+            width: 1024,
+            height: 1024,
+            position: "top-right",
+            size: "w-[60vh] h-auto",
+            opacity: 20,
+          },
+        ]}
+      >
+        <div className="w-full">
+          <ExperienceComponent />
+        </div>
+      </BackgroundComponent>
+      <BackgroundComponent
+        backgroundColor="bg-white"
+        images={[
+          {
+            src: "/images/monstera-bottom-left.png",
+            alt: "Monstera Bottom Left",
+            width: 1024,
+            height: 1024,
+            position: "bottom-left",
+            size: "h-[80vh] w-auto",
+            opacity: 20,
+          },
+        ]}
+      >
+        <div className="w-full">
+          <ProjectsComponent />
+        </div>
+      </BackgroundComponent>
       <div className="w-full">
         <ContactComponent />
       </div>

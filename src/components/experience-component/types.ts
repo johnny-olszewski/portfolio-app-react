@@ -2,6 +2,8 @@ export type Experience = {
   title: string;
   organization: string;
   period: string;
-  description: string;
+  description?: string;
+  bullets: string[];
   image?: string;
+  shadowTitle?: string;
 };

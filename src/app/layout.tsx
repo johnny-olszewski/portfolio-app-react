@@ -10,7 +10,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Johnny Olszewski - Portfolio",
+  title: "Meet JohnnyO.dev",
   description:
     "Software Engineer. Builder. Portfolio showcasing my work and experience.",
 };
