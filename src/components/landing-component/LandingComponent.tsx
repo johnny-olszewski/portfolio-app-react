@@ -7,6 +7,7 @@ import {
   TbMail,
 } from "react-icons/tb";
 import Image from "next/image";
+import { Constants } from "./constants";
 
 const LandingComponent = () => {
   const _renderHeading = () => {
@@ -25,15 +26,11 @@ const LandingComponent = () => {
   const _renderDetails = () => {
     return (
       <div className="flex flex-col items-start justify-center gap-6 w-full">
-        <p className="text-2xl text-gray-500">
-          Whether it&apos;s building software professionally or tinkering on my
-          own, I love to see my vision come to life and build someting from
-          nothing.
-        </p>
+        <p className="text-2xl text-gray-500">{Constants.DESCRIPTION}</p>
         <div className="flex flex-row items-center gap-2 w-full justify-between">
-          <div className="flex flex-row items-center">
-            <TbMapPin className="text-gray-400" />
-            <p>San Diego, CA</p>
+          <div className="flex flex-row items-center gap-2">
+            <TbMapPin className="text-gray-400 w-[24px] h-[24px]" />
+            <p>{Constants.LOCATION}</p>
           </div>
           <div className="flex flex-row gap-4">
             <div className="p-2 rounded-full border border-gray-400 hover:border-gray-600 transition-colors cursor-pointer">

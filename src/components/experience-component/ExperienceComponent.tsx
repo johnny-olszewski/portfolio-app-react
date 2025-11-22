@@ -40,7 +40,7 @@ const ExperienceItem = ({
           {experience.organization}
         </div>
         {experience.description && (
-          <p className="text-gray-900 font-medium text-lg leading-relaxed break-words">
+          <p className="text-gray-900 font-medium text-lg leading-relaxed break-words whitespace-pre-line">
             {experience.description}
           </p>
         )}
