@@ -1,6 +1,7 @@
 import React from "react";
 import { Constants } from "./constants";
 import type { Project } from "./types";
+import { features } from "@/config/features";
 
 const ProjectsComponent = () => {
   const projects = Constants.PROJECT_DATA;
@@ -40,19 +41,34 @@ const ProjectsComponent = () => {
       </div>
     );
   };
-
-  return (
-    <div className="flex flex-col w-full min-h-[80vh] items-center justify-center">
-      <div className="flex flex-col w-3/4">
-        <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 pb-1 w-fit">
-          my projects
-        </h2>
-
-        <div className="flex flex-col w-full justify-center items-center">
+  const _renderProjects = () => {
+    return (
+      <div className="flex flex-col w-full h-full justify-center items-center">
+        {features.projects ? (
           <div className="grid grid-cols-3 w-full gap-4 pt-8">
             {projects.map((project, index) => _renderProject(project, index))}
           </div>
-        </div>
+        ) : (
+          <div className="flex w-1/2 bg-lime-600/10 rounded-lg p-8 gap-4 flex-col justify-between">
+            <h3 className="text-5xl font-semibold text-lime-800/40">
+              coming soon
+            </h3>
+            <p className="text-xl font-semibold">
+              Doing some final refactoring...
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="flex flex-col w-full h-[60vh] items-center justify-center">
+      <div className="flex flex-col w-3/4 h-full">
+        <h2 className="shrink-0 text-5xl font-semibold border-lime-600/30 border-b-4 pb-1 w-fit">
+          my projects
+        </h2>
+        {_renderProjects()}
       </div>
     </div>
   );

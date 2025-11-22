@@ -35,6 +35,10 @@ export const features = {
     process.env.NEXT_PUBLIC_ENABLE_BLOG,
     isDevelopment // Default: true in dev, false in prod
   ),
+  projects: isFeatureEnabled(
+    process.env.NEXT_PUBLIC_ENABLE_PROJECTS,
+    isDevelopment // Default: true in dev, false in prod
+  ),
 } as const;
 
 export type FeatureName = keyof typeof features;
